@@ -16,8 +16,8 @@ def get_travel_time(api_key, origin, destination, mode='driving'):
         return None
 
 api_key = os.getenv('API_KEY')
-origin = '4745 16th Ave NE, Seattle, WA 98105'
-destination = '7671 Seaview Ave NW, Seattle, WA 98117'
+origin = 'Seattle, WA'
+destination = 'Los Angeles, CA'
 
 travel_time = get_travel_time(api_key, origin, destination)
 print(f"Travel time from {origin} to {destination} by car: {travel_time}")
