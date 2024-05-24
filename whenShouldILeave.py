@@ -3,7 +3,6 @@ import os
 from dotenv import load_dotenv
 import requests
 import subprocess
-import pushover
 
 load_dotenv()
 def get_travel_time(api_key, origin, destination, mode='driving'):
@@ -17,7 +16,11 @@ def get_travel_time(api_key, origin, destination, mode='driving'):
     else:
         return None
 
+# Uncomment If you want to get the message in the console
+# print "Travel time from {origin} to {destination} by car: {travel_time}"
 
+
+# Uncomment If you want to get the message on your Mac
 # This sends a notification to the Mac OS using osascript
 # if travel_time:
 #     message = f"Travel time from {origin} to {destination} by car: {travel_time}"
